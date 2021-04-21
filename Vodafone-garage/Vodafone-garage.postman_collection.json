@@ -1,0 +1,93 @@
+{
+	"info": {
+		"_postman_id": "26e0420d-0ea1-477d-84b9-6a060a566845",
+		"name": "Vodafone-garage",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "parkCar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "car_type",
+							"value": "Car",
+							"type": "text"
+						},
+						{
+							"key": "car_color",
+							"value": "BLACK",
+							"type": "text"
+						},
+						{
+							"key": "car_plate",
+							"value": "34SRD1982",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/park-car",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"park-car"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Park Status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/status",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "leaveCar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "ticket",
+							"value": "0",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/leave-car",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"leave-car"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
